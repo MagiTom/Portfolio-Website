@@ -1,0 +1,142 @@
+@import '../../../assets/main.scss';
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $grayColor;
+    z-index: -100;
+}
+
+.details{
+
+    @include paragraphPhone();
+    background-color: $grayColor;
+    text-align: center;
+
+    .header{
+        position: relative;
+        margin-top: 6em;
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__content{
+       margin-top: 3em;
+       margin-bottom: 2em;
+       padding: 0 1em 4em 1em;
+    }
+
+    h1{
+        text-transform: uppercase;
+    }
+
+    p{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    i{
+        font-size: 2rem;
+        padding: 0.5em;
+    }
+
+
+    &__btn{
+        text-decoration: underline;
+        display: flex;
+        flex-direction: column;
+    }
+
+    video{
+        width: 90%;
+        height: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    img{
+        width: 90%;
+        height: auto;
+        margin-bottom: 2em;
+    }
+ 
+}
+
+@media (min-width: $md){
+
+    .details{
+
+        &__content{
+            margin-top: 4em;
+            margin-bottom: 3em;
+            padding: 0 3em;
+            padding: 0 3em 2em 3em;
+         }
+    }
+
+}
+
+@media (min-width: $lg){
+
+    .details{
+    @include paragraph();
+
+    }
+
+}
+
+
+@media (min-width: $xl) {
+    
+    .details{
+    
+
+        .header{
+            margin-top: 8em;
+            margin-bottom: 4em;
+        }
+
+        &__content{
+               text-align: left;
+               width: 35%;
+               padding: 0;
+            }
+
+            &__btn{
+                flex-direction: row;
+                align-items: center;
+
+                span{
+                    margin-left: 0.7em;
+                }
+            }
+
+            i{
+                padding: 0;
+            }
+
+        
+    .galery{
+        // margin-top: 2em;
+        text-align: right;
+        margin-bottom: 8em;
+    }
+
+    video{
+        width: 80%;
+        padding: 0;
+    }
+
+    img{
+        width: 80%;
+        height: auto;
+    }
+        
+        }
+    }
+

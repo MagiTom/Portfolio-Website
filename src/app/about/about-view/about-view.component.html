@@ -1,0 +1,47 @@
+<section class="about">
+    <div class="bg"></div>
+
+
+    <h1 class="about__title">
+        <div [@lengther2]="startAnimation? 'long': 'short'" class="line"></div>
+        about<span> me</span>
+        <div [@lengther2]="startAnimation? 'long': 'short'" class="line"></div>
+    </h1>
+
+
+    <app-two-colums-layout [content2]="paragraph">
+        <ng-container movingContent>
+            <img [@fadeInUp]="startAnimation" src="../../../assets/img/my.jpg" alt="My photo" class="myImage">
+            <img [@fadeInUp]="startAnimation" src="../../../assets/svg/kolo.svg" alt="rotate text" class="rotate">
+        </ng-container>
+
+
+        <ng-container staticContent>
+            <p #paragraph [@fadeInUp]="startAnimation"><b>Hello!</b><br> My name's Magda.<br> I am a graduate of
+                postgraduate studies "Front-End developer with Angular" which I finished with the best posibility grade
+                <i class="far fa-smile"></i> I wanted to learn as much as possible to start made my own ideas for
+                projects.<br><br>
+                My adventure with programming started when I discovered that I wanted do something more creative and
+                valuable than before. I watched with envy the work of graphic designers, programmers, architects, seeing
+                how they participate in a production of something useful and pretty. I was wondering what can I do to
+                change my job and then, step by step I started to learn new skills.<br><br>
+                At the beginning of this road I was learning Adobe Photoshop, Illustrator and XD in a computer graphics
+                academy. In this course I also got to know HTML and CSS. After that, I noticed that I wanted do
+                something more interactive and that it would be nice to make some apps or websites. And so I decided to
+                try programming. My friends always told me I had an analytical mind, and that programming should be good
+                for me. I covered many topics really fast since they were a lot of fun to me, and so I put even more
+                effort into it.<br><br>
+                I am a calm person, but with a lot sense of humor. I have hobbies that are not typical for a woman, for
+                example I like fishing and programming <i class="far fa-smile"></i> The fact is that when I become
+                interested in something I always strive to be the best at it, thus I work a lot to achieve the best
+                results (and a lot of tasteful fish <i class="far fa-laugh-squint"></i>).
+            </p>
+            <div class="social">
+                <a href="#">Linkedin</a>
+                <a href="https://github.com/MagiTom">Github</a>
+                <a href="https://www.facebook.com/profile.php?id=100001008579738">Facebook</a>
+            </div>
+        </ng-container>
+    </app-two-colums-layout>
+
+</section>

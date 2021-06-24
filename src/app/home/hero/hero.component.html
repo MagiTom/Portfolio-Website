@@ -1,0 +1,11 @@
+<app-loading></app-loading>
+<div class="hero">
+    <div @stretchSquare class="hero__rec1"></div>
+    <div @stretchSquare class="hero__rec2"><div class="image"></div></div>
+    <div class="hero__text">
+        <p @fromOpacity>new.</p>
+        <p @fromOpacity @textAnimation><span *ngFor="let word of words">{{ word }}</span></p>
+        <p @fromOpacity>developer</p>
+    </div>
+    <app-moving-bar [info]="media"></app-moving-bar>
+</div>

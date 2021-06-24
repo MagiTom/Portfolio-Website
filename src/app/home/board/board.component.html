@@ -1,0 +1,6 @@
+
+<div #b>
+<div *ngIf="intersection" [@listAnimation] class="board" id="board">
+    <div *ngFor="let skill of skills" class="cell" data-cell><img [src]="skill"> </div>
+  </div>
+</div>

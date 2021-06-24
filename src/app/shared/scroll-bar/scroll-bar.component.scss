@@ -1,0 +1,27 @@
+@import '../../../assets/main.scss';
+
+#scrollPath, #progressbar{
+    position: fixed;
+    top: 50%;
+    left: 1%;
+    width: 2px;
+    height: 40%;
+    background-color: $lineColor;
+    z-index: 10;
+}
+#progressbar{
+    width: 3px;
+    height: 0%;
+}
+
+@media(min-width: $md){
+    #scrollPath, #progressbar{
+        left: 3%;
+    }
+}
+
+@media(min-width: $xl){
+    #scrollPath, #progressbar{
+        left: 10%;
+    }
+}

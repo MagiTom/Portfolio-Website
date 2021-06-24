@@ -1,0 +1,60 @@
+
+@import '../../../assets/main.scss';
+
+
+    .section__row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+    .contentWrapper{
+        position: relative;
+        text-align: center;
+    }
+
+    .section__col:first-child{
+        text-align: center;
+        position: relative;
+
+    }
+    
+
+
+@media (min-width: $xl) {
+    
+        .section__row{
+            position: relative;
+            flex-direction: row;
+           align-items: flex-start;
+      
+        }
+    
+        .section__col{
+            width: 40%;
+        }
+    
+        .contentWrapper{
+            position: absolute;
+            text-align: left;
+            left: 15%;
+           top: 0%;
+        }
+
+        .move{
+            position: fixed;
+           top: 50px;
+        }
+        .stay{
+        // top: 62%;
+        bottom: 10%;
+        top: auto;
+        }
+
+        .section__col:last-child{
+            width: 60%;
+        }
+    }
+

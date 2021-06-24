@@ -1,0 +1,160 @@
+
+@import '../../../assets/main.scss';
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $grayColor;
+    z-index: -100;
+}
+
+.about{
+
+    @include paragraphPhone();
+    background-color: $grayColor;
+    &__title{
+        text-align: center;
+        margin: 3em 0;
+        // padding: 1em 0;
+        font-size: 3rem;
+        line-height: 1em;
+        text-transform: uppercase;
+
+        span{
+            -webkit-text-stroke: 1px #707070;
+            color: transparent;
+        }
+    }
+
+    .line{
+        height: 1px;
+        background-color: $lineColor;
+        width: 100%;
+    }
+
+    .line:first-child{
+      margin-bottom: 0.5em;
+    }
+    .line:last-child{
+      margin-top: 0.5em;
+    }
+
+
+    .myImage{
+        width: 250px;
+        height: auto;
+        box-shadow: 0 3px 6px rgba(0,0,0, 0.2);
+    }
+
+    p, .social{
+       margin-top: 2em;
+       margin-bottom: 2em;
+       padding: 0 1em;
+    }
+ 
+    .rotate{
+        position: absolute;
+        right: -15%;
+        top: 80%;
+        width: 100px;
+        height: auto;
+        animation: rotate 17s linear infinite;
+    }
+
+    .social{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: $md){
+
+    .about{
+
+   
+        .myImage{
+            width: 350px;
+            height: auto;
+        }
+
+        p, .social{
+            margin-top: 4em;
+            margin-bottom: 3em;
+            padding: 0 3em;
+         }
+
+    .rotate{
+        width: 150px;
+    }
+    }
+
+}
+
+@media (min-width: $lg){
+
+    .about{
+    @include paragraph();
+
+    .myImage{
+        height: auto;
+    }
+
+    p, .social{
+       justify-content: space-evenly;
+       padding: 0 4em;
+     }
+    }
+
+}
+
+
+@media (min-width: $xl) {
+    
+    .about{
+        &__title{
+            text-align: left;
+            margin: 4em 4.5em;
+            width: 30%;
+        }
+    
+    
+            p, .social{
+               margin-top: 0;
+               margin-bottom: 4em;
+               padding: 0 8em 0 6em;
+            }
+        }
+    
+
+        .rotate{
+            width: 180px;
+        }
+        .lengthening{
+            animation: longer 2s ease-in-out both;
+        }
+    
+    }
+
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes longer{
+   0%{
+       width: 20%;
+       opacity: 0.2;
+   }
+   100%{
+       width: 30%;
+       opacity: 1;
+   }
+}

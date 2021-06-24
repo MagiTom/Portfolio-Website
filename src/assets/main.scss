@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$accentColor: rgba(187, 138, 176, 1);
+$grayColor: rgba(250, 250, 250, 1);
+$lineColor: rgba(112,112,112, 0.7);
+
+
+@mixin paragraph() {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    line-height: 2.5rem;
+    color: #707070;
+}
+
+
+@mixin paragraphPhone() {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    color: #707070;
+}
+
+body{
+    @include paragraph();
+}

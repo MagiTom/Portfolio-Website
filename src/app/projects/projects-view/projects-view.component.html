@@ -1,0 +1,59 @@
+
+<section class="projects">
+    <div class="bg"></div>
+<h1 @fromOpacity class="projects__title">choosen<span> projects</span></h1>
+
+<app-two-colums-layout [content2]="items">
+    <ng-container movingContent>
+   <div [@fromLeft]="startAnimation" class="projects__menu">
+     <p [ngClass]="{'active': currentActive === 1}" (click)="scroll(webs)">websites</p>
+     <p [ngClass]="{'active': currentActive === 2}" (click)="scroll(websApps)">apps</p>
+     <p [ngClass]="{'active': currentActive === 3}" (click)="scroll(websGames)">games</p>
+   </div>
+    </ng-container>
+
+
+    <ng-container staticContent>
+  <div class="projects__items" #items>
+
+    <div [@listAnimation]="startAnimation" id="websites" class="group" #webs>
+    <div *ngFor="let web of websites" class="item">
+      <img class="image" [src]="web.img2" [alt]="web.name">
+      <h3 class="name">{{ web.name }}</h3>
+      <p class="text"><span class="technologies">Technologies: </span>{{ web.technology }}</p>
+      <div class="links">
+      <a [routerLink]="[web.id]">show more</a>
+      <a [href]="web.github"><i class="fab fa-github"></i> source code</a>
+    </div>
+    </div>
+  </div>
+
+  <div [@listAnimation]="startAnimation" id="apps" class="group" #websApps>
+    <div *ngFor="let app of apps" class="item">
+      <img class="image" [src]="app.img" [alt]="app.name">
+      <h3 class="name">{{ app.name }}</h3>
+      <p class="text"><span class="technologies">Technologies: </span>{{ app.technology }}</p>
+      <div class="links">
+      <a [routerLink]="[app.id]">show more</a>
+      <a [href]="app.github"><i class="fab fa-github"></i> source code</a>
+    </div>
+    </div>
+  </div>
+
+  <div [@listAnimation]="startAnimation" id="games" class="group" #websGames>
+    <div *ngFor="let game of games" class="item">
+      <img class="image" [src]="game.img" [alt]="game.name">
+      <h3 class="name">{{ game.name }}</h3>
+      <p class="text"><span class="technologies">Technologies: </span>{{ game.technology }}</p>
+      <div class="links">
+      <a [routerLink]="[game.id]">show more</a>
+      <a [href]="game.github"><i class="fab fa-github"></i> source code</a>
+    </div>
+    </div>
+  </div>
+
+  </div>
+    </ng-container>
+</app-two-colums-layout>
+
+</section>

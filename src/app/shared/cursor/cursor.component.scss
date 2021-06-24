@@ -1,0 +1,22 @@
+@import '../../../assets/main.scss';
+
+#cursor{
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+   transform: translate(-50%, -50%);
+   transition: 0.2s;
+   box-sizing: border-box;
+    pointer-events: none;
+    border: 1px solid $lineColor;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+@media(min-width: $xl) {
+    #cursor{
+       display: block;
+    }
+    
+}

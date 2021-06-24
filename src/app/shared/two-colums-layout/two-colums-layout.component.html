@@ -1,0 +1,15 @@
+<div class="section__row">
+    <app-scroll-bar></app-scroll-bar>
+    <div class="section__col" #col1>
+
+        <div class="contentWrapper" #content1>
+            <ng-content (scroll)="scrollHandler($event)" select="[movingContent]"></ng-content>
+        </div>
+    </div>
+    <div class="section__col">
+
+        <ng-content select="[staticContent]"></ng-content>
+
+    </div>
+
+</div>

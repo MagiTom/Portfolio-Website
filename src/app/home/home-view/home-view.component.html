@@ -1,0 +1,26 @@
+
+<app-hero></app-hero>
+<section>
+    <div class="skills">
+    <h3>skills</h3>
+    <div [@lengther]="this.line.classList.contains('animate')? 'long': 'short'" class="line" #line></div>
+</div>
+
+<app-board [skills]="skillsSvg"></app-board>
+
+</section>
+
+<section>
+
+    <div class="skills">
+        <h3>interested in</h3>
+        <div [@lengther]="this.line2.classList.contains('animate')? 'long': 'short'" class="line" #line2></div>
+    </div>
+   
+
+    <app-board [skills]="interestedIn"></app-board>
+
+</section>
+
+<app-see #seeSection></app-see>
+

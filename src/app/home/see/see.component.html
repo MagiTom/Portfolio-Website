@@ -1,0 +1,5 @@
+<section class="see" #img1>
+    <div [@fadeUp]="this.img1.classList.contains('animate')? 'up': 'down'" class="see__img"></div>
+    <div [@fadeBottom]="this.img1.classList.contains('animate')? 'down': 'up'"  class="see__img"></div>
+    <button routerLink='/projects'>see my projects</button>
+</section>

@@ -1,0 +1,52 @@
+@import '../../../assets/main.scss';
+
+
+.moving{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    width: 200vw;
+    border-top: 1px solid $lineColor;
+    border-bottom: 1px solid $lineColor;
+    overflow: hidden;
+
+    &__slide{
+        width: 100vw;
+        transform: translateX(-100vw);
+        display: flex;
+        justify-content: space-around;
+        animation: moveSlideshow 15s linear infinite;
+        overflow: hidden;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+    }
+
+    &__item > *{
+        margin: 1em 2em;
+        font-size: 1rem;
+    }
+
+    i{
+        font-size: .7rem;
+    }
+}
+
+@keyframes moveSlideshow {
+    0%{
+       transform: translateX(0);
+    }
+
+    100% { 
+        transform: translateX(-100vw);
+    }
+  
+  }
+
+ 
+  
+
+
+

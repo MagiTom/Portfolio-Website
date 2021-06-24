@@ -1,0 +1,201 @@
+
+@import '../../../assets/main.scss';
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $grayColor;
+    z-index: -100;
+}
+
+.projects{
+
+    @include paragraphPhone();
+    background-color: $grayColor;
+    &__title{
+        text-align: center;
+        margin: 2em 0;
+        padding: 1em 0;
+        font-size: 3rem;
+        line-height: 1em;
+        text-transform: uppercase;
+
+        span{
+            -webkit-text-stroke: 1px #707070;
+            color: transparent;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__menu{
+        p {
+            margin-top: 1em;
+            cursor: pointer;
+        }
+
+        p:hover, p:active, p:focus{
+            color: $accentColor;
+        }
+
+    }
+
+    &__items{
+        margin-bottom: 2em;
+    }
+
+    .image{
+
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        object-position:top;
+    }
+
+    .item{
+        text-align: center;
+        border: 1px solid $lineColor;
+        margin: 0 0.5em;
+        padding: 1em;
+    }
+
+    .name{
+        text-transform: uppercase;
+    }
+
+    .name, .text, .links{
+        margin-top: 1em;
+    }
+
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .fa-github{
+        font-size: 1.2rem;
+    }
+
+    .technologies{
+        font-weight: 800;
+    }
+
+    .group{
+        margin-top: 4em;
+    }
+
+}
+
+@media (min-width: $md){
+
+    .projects{
+
+        .group{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .item{
+            padding: 2em;
+            width: 80%;
+        }
+    }
+
+}
+
+@media (min-width: $lg){
+
+    .projects{
+    @include paragraph();
+
+}
+}
+
+@media (min-width: $xl) {
+    
+    .projects{
+        overflow: hidden;
+        &__title{
+            text-align: right;
+            margin: 4em 7em 1em 0;
+        }
+
+        &__menu{
+            margin-top: 2em;
+            font-size: 1.5rem;
+        }
+
+        &__items{
+           padding: 0;
+           margin: 0;
+           margin-bottom: 8em;
+        }
+
+        .group{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 2em;
+            padding: 0;
+            width: 102%;
+          }
+
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-size: 1rem;
+            width: 50%;
+            height: 450px;
+        }
+
+        .image{
+            width: 100%;
+        }
+
+        .name{
+            font-size: 1rem;
+        }
+
+        .text{
+            font-size: 0.8rem;
+            line-height: 1.6rem;
+        }
+
+        .text, .name, .links{
+            margin-top: 0.5em;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .links{
+            display: block;
+            margin-right: auto;
+            text-decoration: underline;
+            font-size: 0.8rem;
+        }
+
+        .links > a + a{
+            margin-left: 2em;
+        }
+        }
+    }
+
+    .active{
+        color: $accentColor;
+    }

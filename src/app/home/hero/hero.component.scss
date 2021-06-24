@@ -1,0 +1,143 @@
+@import '../../../assets/main.scss';
+
+.hero{
+
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+  
+    &__rec1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40%;
+        width: 40%;
+        background-color: $grayColor;
+    }
+    
+    &__rec2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 65%;
+        width: 50%;
+        background-color: $accentColor;
+
+        .image{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 60%;
+            background: url("../../../assets/img/purple_woman.jpeg" );
+            background-size: cover;
+            background-position: center;
+        }
+        
+    }
+
+    &__text{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: fit-content;
+        transform: translate(-50%, -40%);
+        text-transform: uppercase;
+
+        p{
+            line-height: 2.5rem;
+        }
+
+        p:first-child{
+            font-size: 1.2rem;
+        }
+
+        p:nth-child(2){
+            margin-left: 1em;
+            font-size: 2rem;
+            -webkit-text-stroke: 1px #707070;
+             color: transparent;
+        }
+
+        p:nth-child(3){
+            margin-left: 2em;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+@media (min-width: $md) {
+    .hero{
+        height: 600px;
+
+        &__rec1{
+            width: 40%;
+            height: 70%;
+        }
+        &__rec2{
+            width: 30%;
+            height: 60%;
+
+            .image{
+                width: 60%;
+                height: 80%;
+            }
+        }
+
+        &__text{
+            p{
+                line-height: 3rem;
+            }
+            p:first-child{
+                font-size: 2rem;
+                line-height: 2rem;
+                margin-left: 1em;
+            }
+            p:nth-child(2){
+                font-size: 3rem;
+            }
+            p:nth-child(3){
+                font-size: 3rem;
+            }
+        }
+
+    }
+    
+}
+
+@media (min-width: $xl){
+    .hero{
+        height: 100vh;
+
+        &__rec1{
+            width: 40%;
+            height: 70%;
+        }
+        &__rec2{
+            width: 25%;
+            height: 70%;
+
+            .image{
+                width: 60%;
+                height: 80%;
+            }
+        }
+
+        &__text{
+            p{
+                line-height: 5rem;
+            }
+            p:first-child{
+                font-size: 2rem;
+            }
+            p:nth-child(2){
+                font-size: 5rem;
+            }
+            p:nth-child(3){
+                font-size: 5rem;
+            }
+        }
+
+    }
+}

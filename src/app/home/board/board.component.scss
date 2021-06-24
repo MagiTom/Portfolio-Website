@@ -1,0 +1,78 @@
+@import '../../../assets/main.scss';
+
+
+$cell-size-small: 80px;
+$cell-size-medium: 150px;
+$cell-size-large: 120px;
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4, auto);
+    margin-top: 4em;
+
+    img{
+        width: 40px;
+        height: auto;
+    }
+}
+
+.cell {
+    width:$cell-size-small;
+    height: $cell-size-small;
+    border: 1px solid $lineColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3),
+.cell:nth-child(4) {
+    border-top: none;
+}
+
+.cell{
+    border-left: none;
+}
+
+.cell:nth-child(4n + 4) {
+    border-right: none;
+}
+
+.cell{
+    border-bottom: none;
+}
+
+@media (min-width: $md){
+  
+    .board{
+       
+    img{
+        width: 70px;
+    }
+    }
+    .cell{
+        width: $cell-size-medium;
+        height: $cell-size-medium;
+    }
+}
+
+@media (min-width: $lg){
+  
+    .board{
+    img{
+        width: 50px;
+    }
+    }
+    .cell{
+        width: $cell-size-large;
+        height: $cell-size-large;
+    }
+}
+

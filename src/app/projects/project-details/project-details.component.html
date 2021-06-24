@@ -1,0 +1,34 @@
+<section class="details">
+    <div class="bg"></div>
+
+    <div class="header">
+        <app-moving-bar [info]="header"></app-moving-bar>
+    </div>
+
+
+    <app-two-colums-layout [content2]="presentation">
+        <ng-container movingContent>
+            <div [@fadeInUp]="startAnimation" class="details__content">
+                <h1>{{ project.name }}</h1>
+                <p [innerHTML]="project.text"></p>
+                <a class="details__btn" [href]="project.github"><i class="fab fa-github"></i><span>source code</span></a>
+            </div>
+        </ng-container>
+
+
+        <ng-container staticContent>
+            <div [@fadeInUp]="startAnimation" class="galery" #presentation>
+                <video autoplay muted loop id="myVideo">
+                    <source [src]="project.video" type="video/mp4">
+                  </video>
+                <!-- <img [src]="project.img" alt=""> -->
+                <picture>
+                    <source [srcset]="project.img3"
+                            media="(max-width: 450px)">
+                    <img [src]="project.img" alt="" />
+                </picture>
+            </div>
+        </ng-container>
+    </app-two-colums-layout>
+
+</section>

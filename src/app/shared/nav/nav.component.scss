@@ -1,0 +1,117 @@
+@import '../../../assets/main.scss';
+
+
+nav{
+ 
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    z-index: 10;
+
+    p{
+        display: none;
+        cursor: pointer;
+    }
+   
+    ul{
+        display: none;
+        height: fit-content;
+        padding: 2em 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        list-style: none;
+        background-color: $grayColor;
+        z-index: -1;
+    }
+
+    li{
+        margin: 1em auto;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    li:hover, p:hover{
+        color: black;
+    }
+
+    .line{
+        height: 2px;
+        width: 30%;
+        opacity: 0.5;
+        background-color: $lineColor;
+    }
+
+    .toggle-bars{
+        margin-left: auto;
+        padding: 0.5em;
+    }
+
+    
+.open{
+    display: block;
+}
+}
+
+
+@media (min-width: $lg) {
+    
+  nav{
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0 2em;
+
+    .toggle-bars{
+        display: none;
+    }
+
+    p{
+        display: block;
+    }
+
+    i{
+        margin-right: 0.5em;
+        opacity: 0.5;
+    }
+
+    ul{
+        position: relative;
+        display: flex;
+        height: auto;
+        width: fit-content;
+        padding: 1em 0;
+        background-color: transparent;
+    }
+
+    li{
+        margin-left: 1em;
+    }
+
+    li:first-child{
+        display: none;
+    }
+
+    li:nth-child(2){
+        display: none;
+    }
+
+    .line{
+        width: 3em;
+        margin: auto 0 auto 1em;
+    }
+  }
+
+}
+
+.active{
+    color: $accentColor;
+}

@@ -1,0 +1,17 @@
+<nav>
+    <p (click)="scrollToElement(nav)" [routerLink]="['./']"><i class="far fa-circle"></i>Magdalena Tomala</p>
+    <div class="toggle-bars">
+        <i *ngIf="!openedNav" (click)="openedNav = true" class="fas fa-bars"></i>
+        <i *ngIf="openedNav" (click)="openedNav = false" class="fas fa-times"></i>
+    </div>
+    <ul [ngClass]="openedNav? 'open': ''">
+        
+        <li [routerLink]="['./']" (click)="openedNav = false">home</li>
+        <li class="line"></li>
+        <li [routerLink]="['./about']" routerLinkActive="active" (click)="openedNav = false">about</li>
+        <li class="line"></li>
+        <li [routerLink]="['./projects']" routerLinkActive="active" (click)="openedNav = false">projects</li>
+        <li class="line"></li>
+        <li (click)="scrollToElement(contact)">contact</li>
+    </ul>
+</nav>
