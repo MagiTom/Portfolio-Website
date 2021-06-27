@@ -1,6 +1,23 @@
 # MyPortfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+This is my portfolio website, which I designed in Adobe XD and then made it by using Angular
+framework version 12.0.5. It is a summary of my up-to-date work and the process of learning how to program. It is more
+clear and more orderly than my other projects. The experience of writing apps and websites taught me
+how to write a more friendly code.
+In this project I used angular animations for the first time. Before that, I was using only css keyframes or
+Anime.js. The website is responsive and written according to the mobile first standards.
+
+## Demo
+
+https://mag-porfolio.herokuapp.com/
+
+## Installation
+
+Clone this repository to your local disc. Then run:
+
+```bash
+npm install
+```
 
 ## Development server
 
